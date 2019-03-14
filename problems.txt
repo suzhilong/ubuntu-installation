@@ -11,3 +11,6 @@ Keep Boot mode in BIOS with "UEFI mode" go with the "Install Ubuntu" Option. Cho
 8)Note: steps 3 & 4 are not mandatory.
 
 2.
+ubuntu时间差8小时
+sudo timedatectl set-local-rtc 1
+重启
