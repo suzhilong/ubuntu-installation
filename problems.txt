@@ -10,9 +10,12 @@ Keep Boot mode in BIOS with "UEFI mode" go with the "Install Ubuntu" Option. Cho
 6)select the device for boot loader from the drop down option at bottom of the window as /dev/sdX (X is a variable) replace X with your 7)intended drive. if you have two drives they may be named sda and sdb. this is very important. and click "Install Now"
 8)Note: steps 3 & 4 are not mandatory.
 
-2.
-ubuntu时间差8小时
-sudo apt-get install ntpdate
-sudo ntpdate time.windows.comsudo ntpdate time.windows.com
-sudo hwclock --localtime --systohc
-重启
+2.ubuntu时间不对
+1）先查看当前系统时间和时区
+date -R
+2）选择时区（按提示依次选择Asia-China-Beijing
+tzselect
+3）复制文件到/etc目录下
+sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+4)再次查看时间
+date -R
