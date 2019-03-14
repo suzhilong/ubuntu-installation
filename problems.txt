@@ -12,5 +12,7 @@ Keep Boot mode in BIOS with "UEFI mode" go with the "Install Ubuntu" Option. Cho
 
 2.
 ubuntu时间差8小时
-sudo timedatectl set-local-rtc 1
+sudo apt-get install ntpdate
+sudo ntpdate time.windows.comsudo ntpdate time.windows.com
+sudo hwclock --localtime --systohc
 重启
