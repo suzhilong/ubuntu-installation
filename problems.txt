@@ -1,0 +1,13 @@
+1.
+Ubuntu Error : “The partition table format in use on your disks normally requires you to create a separate partition for boot loader code”
+解决办法：添加一个分区，选择EFI，500M左右即可
+Keep Boot mode in BIOS with "UEFI mode" go with the "Install Ubuntu" Option. Choose Something Else option.
+1)Create a EFI Partition of around 500mb
+2)Create a EXT4 Partition of your wish (100gb or 200gb) for installing Ubuntu and Mount it to / (Slash)
+3)If you want to use swap partition, create a swap partition with 2 times of your RAM.
+4)If you want to give additional space for home folder create a EXT4 partition of your wish and mount it to /home.
+5)leave the remaining place unallocated as you can make them after installation.
+6)select the device for boot loader from the drop down option at bottom of the window as /dev/sdX (X is a variable) replace X with your 7)intended drive. if you have two drives they may be named sda and sdb. this is very important. and click "Install Now"
+8)Note: steps 3 & 4 are not mandatory.
+
+2.
