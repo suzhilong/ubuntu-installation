@@ -108,7 +108,7 @@ sudo make install
 sudo apt-get install libqt4-dev libqglviewer-dev libsuitesparse-dev  libcholmod3.0.6 libcxsparse3.1.4
 
 tar -zxvf g2o.tar.gz
-sudo mv opencv-3.4.0 /usr/local/include
+sudo mv g2o /usr/local/include
 cd g2o
 mkdir build
 cd build
