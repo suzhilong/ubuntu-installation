@@ -126,9 +126,9 @@ control+shift+f7可以回到图形界面
 ## 正文：
 http://www.bewindoweb.com/179.html 这篇非常有用，因为这篇才发现是显卡驱动的问题，其中内核版本先不用管，之后装不了看提示再说。
 但是到安装run文件会出现问题：
-1）注意使用 sudo ./NVIDIA-Linux-x86_64-384.111.run –no-x-check –no-nouveau-check –no-opengl-files 安装之前要先用 sudo chmod 755 NVIDIAxxx.run 命令修改权限，不然会出现找不到命令的情况；
-1）pre-install script failed：https://blog.csdn.net/u014561933/article/details/79958130 这里面讲清楚了；
-2）The target kernel has CONFIG_MODULE_SIG set：https://blog.csdn.net/ksws0292756/article/details/79160742 这篇写了安装NVIDIA驱动常见的错误，里面包含了这个error。
+1）注意使用 sudo ./NVIDIA-Linux-x86_64-384.111.run –no-x-check –no-nouveau-check –no-opengl-files 安装之前要先用 sudo chmod 755 NVIDIAxxx.run 命令修改权限，不然会出现找不到命令的情况；\\
+1）pre-install script failed：https://blog.csdn.net/u014561933/article/details/79958130 这里面讲清楚了；\\
+2）The target kernel has CONFIG_MODULE_SIG set：https://blog.csdn.net/ksws0292756/article/details/79160742 这篇写了安装NVIDIA驱动常见的错误，里面包含了这个error。\\
 我出现这个的原因就是安装Ubuntu是UEFI模式启动的，但是在BIOS中却打开了Security BOOT选项，我修改为传统模式启动就能解决问题。https://blog.csdn.net/lipi37/article/details/79465685 这篇里面也有这个error相应的解释。
 
 
