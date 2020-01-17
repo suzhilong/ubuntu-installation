@@ -19,7 +19,14 @@ sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 4)再次查看时间  
 date -R  
 
-# 3.环境配置
+# 3.cannot access '/dev/video*': No such file or directory:
+> rm /dev/video /dev/video0
+> mknod /dev/video0 c 81 0
+> chmod 666 /dev/video0
+> chgrp video /dev/video0
+> ln -s /dev/video0 /dev/video
+
+# 4.环境配置
 （参考：https://github.com/liyuxiaoboy/environment/blob/master/environment）  
 https://github.com/gaoxiang12/slambook/tree/master/3rdparty  下载一些库  
 
